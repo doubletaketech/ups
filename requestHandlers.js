@@ -10,11 +10,11 @@ var options = {
     imperial: true, // for inches/lbs, false for metric cm/kgs
     currency: 'USD',
     environment: 'sandbox',
-    access_key: 'ECD9453AD9018E66',
-    username: 'eventrio',
-    password: 'Kenziemac1!',
+    access_key: 'upsaccesskey',
+    username: 'upsusername',
+    password: 'upspassword',
     pretty: false,
-    user_agent: 'eventrio | dkerr',
+    user_agent: 'upsusername | yourname',
     debug: false
   }
 
