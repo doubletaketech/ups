@@ -1,0 +1,747 @@
+{
+    "FreightShipService": {
+        "FreightShipPort": {
+            "ProcessShipment": {
+                "input": {
+                    "Shipment": {
+                        "ShipFrom": {
+                            "Name": "xsd:string",
+                            "TaxIdentificationNumber": "xsd:string",
+                            "TariffPoint": "xsd:string",
+                            "Address": {
+                                "AddressLine[]": "xsd:string",
+                                "City": "xsd:string",
+                                "StateProvinceCode": "xsd:string",
+                                "Town": "xsd:string",
+                                "PostalCode": "xsd:string",
+                                "CountryCode": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "AttentionName": "xsd:string",
+                            "Phone": {
+                                "Number": "xsd:string",
+                                "Extension": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "FaxNumber": "xsd:string",
+                            "EMailAddress": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "ShipperNumber": "xsd:string",
+                        "ShipTo": {
+                            "Name": "xsd:string",
+                            "TaxIdentificationNumber": "xsd:string",
+                            "Address": {
+                                "AddressLine[]": "xsd:string",
+                                "City": "xsd:string",
+                                "StateProvinceCode": "xsd:string",
+                                "Town": "xsd:string",
+                                "PostalCode": "xsd:string",
+                                "CountryCode": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "TariffPoint": "xsd:string",
+                            "AttentionName": "xsd:string",
+                            "Phone": {
+                                "Number": "xsd:string",
+                                "Extension": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "FaxNumber": "xsd:string",
+                            "EMailAddress": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "PaymentInformation": {
+                            "Payer": {
+                                "Name": "xsd:string",
+                                "Address": {
+                                    "AddressLine[]": "xsd:string",
+                                    "City": "xsd:string",
+                                    "StateProvinceCode": "xsd:string",
+                                    "Town": "xsd:string",
+                                    "PostalCode": "xsd:string",
+                                    "CountryCode": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "ShipperNumber": "xsd:string",
+                                "AttentionName": "xsd:string",
+                                "Phone": {
+                                    "Number": "xsd:string",
+                                    "Extension": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "FaxNumber": "xsd:string",
+                                "EMailAddress": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "ShipmentBillingOption": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "ManufactureInformation[]": {
+                            "CountryCode": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "Service": {
+                            "Code": "xsd:string",
+                            "Description": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "HandlingUnitOne": {
+                            "Quantity": "xsd:string",
+                            "Type": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "HandlingUnitTwo": {
+                            "Quantity": "xsd:string",
+                            "Type": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "ExistingShipmentID": {
+                            "ShipmentNumber": "xsd:string",
+                            "ConfirmationNumber": {
+                                "Type": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "Value": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "CreationDate": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "HandlingInstructions": "xsd:string",
+                        "DeliveryInstructions": "xsd:string",
+                        "PickupInstructions": "xsd:string",
+                        "SpecialInstructions": "xsd:string",
+                        "ShipmentTotalWeight": {
+                            "Value": "xsd:string",
+                            "UnitOfMeasurement": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "Commodity[]": {
+                            "CommodityID": "xsd:string",
+                            "Description": "xsd:string",
+                            "Weight": {
+                                "UnitOfMeasurement": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "Value": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "Dimensions": {
+                                "UnitOfMeasurement": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "Length": "xsd:string",
+                                "Width": "xsd:string",
+                                "Height": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "NumberOfPieces": "xsd:string",
+                            "PackagingType": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "DangerousGoodsIndicator": "xsd:string",
+                            "CommodityValue": {
+                                "CurrencyCode": "xsd:string",
+                                "MonetaryValue": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "FreightClass": "xsd:string",
+                            "NMFCCommodityCode": "xsd:string",
+                            "NMFCCommodity": {
+                                "PrimeCode": "xsd:string",
+                                "SubCode": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "Reference[]": {
+                            "Number": {
+                                "Code": "xsd:string",
+                                "Value": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "BarCodeIndicator": "xsd:string",
+                            "NumberOfCartons": "xsd:string",
+                            "Weight": {
+                                "UnitOfMeasurement": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "Value": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "ShipmentServiceOptions": {
+                            "EMailInformation[]": {
+                                "EMailType": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "EMail": {
+                                    "EMailAddress[]": "xsd:string",
+                                    "EMailText": "xsd:string",
+                                    "UndeliverableEMailAddress": "xsd:string",
+                                    "Subject": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "PickupOptions": {
+                                "HolidayPickupIndicator": "xsd:string",
+                                "InsidePickupIndicator": "xsd:string",
+                                "ResidentialPickupIndicator": "xsd:string",
+                                "WeekendPickupIndicator": "xsd:string",
+                                "LiftGateRequiredIndicator": "xsd:string",
+                                "HoldAtAirportForPickup": "xsd:string",
+                                "PickupFromDoorIndicator": "xsd:string",
+                                "LimitedAccessPickupIndicator": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "DeliveryOptions": {
+                                "CallBeforeDeliveryIndicator": "xsd:string",
+                                "ConstructionSiteDeliveryIndicator": "xsd:string",
+                                "HolidayDeliveryIndicator": "xsd:string",
+                                "InsideDeliveryIndicator": "xsd:string",
+                                "ResidentialDeliveryIndicator": "xsd:string",
+                                "WeekendDeliveryIndicator": "xsd:string",
+                                "LiftGateRequiredIndicator": "xsd:string",
+                                "SaturdayDeliveryIndicator": "xsd:string",
+                                "DeliveryToDoorIndicator": "xsd:string",
+                                "LimitedAccessDeliveryIndicator": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "OverSeasLeg": {
+                                "Dimensions": {
+                                    "Volume": "xsd:string",
+                                    "Height": "xsd:string",
+                                    "Length": "xsd:string",
+                                    "Width": "xsd:string",
+                                    "UnitOfMeasurement": {
+                                        "Code": "xsd:string",
+                                        "Description": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "Value": {
+                                    "Cube": {
+                                        "CurrencyCode": "xsd:string",
+                                        "MonetaryValue": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "CWT": {
+                                        "CurrencyCode": "xsd:string",
+                                        "MonetaryValue": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "COD": {
+                                "CODValue": {
+                                    "CurrencyCode": "xsd:string",
+                                    "MonetaryValue": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "CODPaymentMethod": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "CODBillingOption": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "RemitTo": {
+                                    "Name": "xsd:string",
+                                    "Address": {
+                                        "AddressLine[]": "xsd:string",
+                                        "City": "xsd:string",
+                                        "StateProvinceCode": "xsd:string",
+                                        "Town": "xsd:string",
+                                        "PostalCode": "xsd:string",
+                                        "CountryCode": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "AttentionName": "xsd:string",
+                                    "Phone": {
+                                        "Number": "xsd:string",
+                                        "Extension": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "FaxNumber": "xsd:string",
+                                    "EMailAddress": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "DangerousGoods": {
+                                "Name": "xsd:string",
+                                "Phone": {
+                                    "Number": "xsd:string",
+                                    "Extension": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "TransportationMode": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "SortingAndSegregating": {
+                                "Quantity": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "DeclaredValue": {
+                                "CurrencyCode": "xsd:string",
+                                "MonetaryValue": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "ExcessDeclaredValue": {
+                                "CurrencyCode": "xsd:string",
+                                "MonetaryValue": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "CustomsValue": {
+                                "CurrencyCode": "xsd:string",
+                                "MonetaryValue": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "DeliveryDutiesPaidIndicator": "xsd:string",
+                            "DeliveryDutiesUnpaidIndicator": "xsd:string",
+                            "HandlingCharge": {
+                                "Percentage": "xsd:string",
+                                "Amount": {
+                                    "CurrencyCode": "xsd:string",
+                                    "MonetaryValue": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "CustomsClearanceIndicator": "xsd:string",
+                            "FreezableProtectionIndicator": "xsd:string",
+                            "ExtremeLengthIndicator": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "PickupRequest": {
+                            "AdditionalComments": "xsd:string",
+                            "Requester": {
+                                "ThirdPartyIndicator": "xsd:string",
+                                "AttentionName": "xsd:string",
+                                "EMailAddress": "xsd:string",
+                                "Name": "xsd:string",
+                                "Phone": {
+                                    "Number": "xsd:string",
+                                    "Extension": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "PickupDate": "xsd:string",
+                            "EarliestTimeReady": "xsd:string",
+                            "LatestTimeReady": "xsd:string",
+                            "PickupTimeReady": "xsd:string",
+                            "DropoffTimeReady": "xsd:string",
+                            "POM": {
+                                "POMNumber": "xsd:string",
+                                "POMNumberType": "xsd:string",
+                                "PickupNotifications": {
+                                    "CompanyName": "xsd:string",
+                                    "EMailNotification[]": {
+                                        "EMailAddress": "xsd:string",
+                                        "EventType[]": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "FailedEMail": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "Documents": {
+                            "FormGroupId": "xsd:string",
+                            "FormGroupIdName": "xsd:string",
+                            "Image[]": {
+                                "Type": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "LabelsPerPage": "xsd:string",
+                                "Format": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "PrintFormat": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "PrintSize": {
+                                    "Length": "xsd:string",
+                                    "Width": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "PackingList": {
+                                "ShipFrom": {
+                                    "Name": "xsd:string",
+                                    "AttentionName": "xsd:string",
+                                    "Address": {
+                                        "AddressLine[]": "xsd:string",
+                                        "City": "xsd:string",
+                                        "StateProvinceCode": "xsd:string",
+                                        "Town": "xsd:string",
+                                        "PostalCode": "xsd:string",
+                                        "CountryCode": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "PhoneNumber": "xsd:string",
+                                    "EMailAddress": "xsd:string",
+                                    "PhoneExtension": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "ShipTo": {
+                                    "Name": "xsd:string",
+                                    "AttentionName": "xsd:string",
+                                    "Address": {
+                                        "AddressLine[]": "xsd:string",
+                                        "City": "xsd:string",
+                                        "StateProvinceCode": "xsd:string",
+                                        "Town": "xsd:string",
+                                        "PostalCode": "xsd:string",
+                                        "CountryCode": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "PhoneNumber": "xsd:string",
+                                    "EMailAddress": "xsd:string",
+                                    "PhoneExtension": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "Reference[]": {
+                                    "Label": "xsd:string",
+                                    "Value": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "HandlingUnit": {
+                                    "Commodity[]": {
+                                        "NumberOfPieces": "xsd:string",
+                                        "PackagingType": {
+                                            "Code": "xsd:string",
+                                            "Description": "xsd:string",
+                                            "targetNSAlias": "fsp",
+                                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                        },
+                                        "DangerousGoodsIndicator": "xsd:string",
+                                        "Description": "xsd:string",
+                                        "NMFCCommodityCode": "xsd:string",
+                                        "FreightClass": "xsd:string",
+                                        "Dimensions": {
+                                            "Length": "xsd:string",
+                                            "Width": "xsd:string",
+                                            "Height": "xsd:string",
+                                            "targetNSAlias": "fsp",
+                                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                        },
+                                        "Weight": "xsd:string",
+                                        "CommodityValue": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "SpecialInstructions": "xsd:string",
+                                    "TotalNumberOfPieces": "xsd:string",
+                                    "TotalWeight": "xsd:string",
+                                    "UnitOfMeasurement": {
+                                        "Code": "xsd:string",
+                                        "Description": "xsd:string",
+                                        "targetNSAlias": "fsp",
+                                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                    },
+                                    "CurrencyCode": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "InternationalForms": "IF:InternationalFormType",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "ITNNumber": "xsd:string",
+                        "TaxID": {
+                            "Type": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "Number": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "MovementReferenceNumber": "xsd:string",
+                        "EICNumberAndStatement": "xsd:string",
+                        "TimeInTransitIndicator": "xsd:string",
+                        "targetNSAlias": "fsp",
+                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                    }
+                },
+                "output": {
+                    "ShipmentResults": {
+                        "AirFreightPickupRequest": {
+                            "Status": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "PreAuthorizationReason[]": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "ShipperNumber": "xsd:string",
+                        "CreationDate": "xsd:string",
+                        "CustomerServiceInformation": "xsd:string",
+                        "OriginServiceCenterCode": "xsd:string",
+                        "DestinationServiceCenterCode": "xsd:string",
+                        "LabelServiceCode": "xsd:string",
+                        "AirFreightModularID": "xsd:string",
+                        "PickupRequestConfirmationNumber": "xsd:string",
+                        "DeliveryDate": "xsd:string",
+                        "ShipmentNumber": "xsd:string",
+                        "BOLID": "xsd:string",
+                        "GuaranteedIndicator": "xsd:string",
+                        "MinimumChargeAppliedIndicator": "xsd:string",
+                        "Rate[]": {
+                            "Type": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "Factor": {
+                                "Value": "xsd:string",
+                                "UnitOfMeasurement": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "TotalShipmentCharge": {
+                            "CurrencyCode": "xsd:string",
+                            "MonetaryValue": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "MinimumBillableWeightAppliedIndicator": "xsd:string",
+                        "BillableShipmentWeight": {
+                            "UnitOfMeasurement": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "Value": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "RatingSchedule": {
+                            "Code": "xsd:string",
+                            "Description": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "DimensionalWeight": {
+                            "UnitOfMeasurement": {
+                                "Code": "xsd:string",
+                                "Description": "xsd:string",
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "Value": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "Service": {
+                            "Code": "xsd:string",
+                            "Description": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "Documents": {
+                            "Image[]": {
+                                "Type": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "GraphicImage": "xsd:string",
+                                "Format": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "Forms[]": {
+                                "Type": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "GraphicImage": "xsd:string",
+                                "Format": {
+                                    "Code": "xsd:string",
+                                    "Description": "xsd:string",
+                                    "targetNSAlias": "fsp",
+                                    "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                                },
+                                "targetNSAlias": "fsp",
+                                "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                            },
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "HoldAtAirportPickupDate": "xsd:string",
+                        "NextAvailablePickupDate": "xsd:string",
+                        "TimeInTransit": {
+                            "DaysInTransit": "xsd:string",
+                            "targetNSAlias": "fsp",
+                            "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                        },
+                        "targetNSAlias": "fsp",
+                        "targetNamespace": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0"
+                    }
+                }
+            }
+        }
+    }
+}

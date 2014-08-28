@@ -1,0 +1,17 @@
+{
+  "name": "ups",
+  "subdomain": "dkerr-ups",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "shipping-ups": "0.4.x",
+    "mongodb": "1.4.7",
+    "soap": "0.5.0",
+    "xml2json": "0.5.1"
+  },
+  "version": "0.0.0-124",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

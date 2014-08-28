@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>UPS Test</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Hello, world!</h1>
+                <p class="lead">UPS Package (XML API)</p>
+                <a id="addressBTN" class="btn btn-primary">Address Verification</a>
+                <a id="addressRequestsBTN" class="btn btn-primary">Address Requests</a>
+                  <a id="addressResponsesBTN" class="btn btn-primary">Address Responses</a>
+                <a id="trackBTN" class="btn btn-primary">Track</a>
+                 <a id="ratesBTN" class="btn btn-primary">Rates</a>
+                 <a id="confirmBTN" class="btn btn-primary">Confirm</a>
+                 <a id="transitBTN" class="btn btn-primary">Transit</a>
+                <hr>
+                <p class="lead">UPS Freight (SOAP API)</p>
+                <a id="freightrateBTN" class="btn btn-primary">Freight Rate</a>
+                 <a id="freightrateDescribeBTN" class="btn btn-primary">Freight Rate Describe</a>
+                 <a id="freightshipDescribeBTN" class="btn btn-primary">Freight Ship Describe</a>
+                <a id="freightshipBTN" class="btn btn-primary">Freight Ship</a>
+            </div>
+            <hr>
+            <h1>Result</h1>
+            <p id="result"></p>
+            <textarea rows="100" style="width:100%" id="resultText" placeholder="text result"></textarea>
+        </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+      
+        <script src="prettyprint.js"></script>
+        <script src="ajaxNode.js"></script>
+    </body>
+</html>

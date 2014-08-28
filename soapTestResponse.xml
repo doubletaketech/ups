@@ -1,0 +1,187 @@
+{
+    "soapenv:Envelope": {
+        "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+        "soapenv:Header": {},
+        "soapenv:Body": {
+            "freightShip:FreightShipResponse": {
+                "xmlns:freightShip": "http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0",
+                "common:Response": {
+                    "xmlns:common": "http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0",
+                    "common:ResponseStatus": {
+                        "common:Code": 1,
+                        "common:Description": "Success"
+                    }
+                },
+                "freightShip:ShipmentResults": {
+                    "freightShip:OriginServiceCenterCode": "RIC",
+                    "freightShip:ShipmentNumber": 59113106,
+                    "freightShip:BOLID": 8810533,
+                    "freightShip:Rate": [{
+                        "freightShip:Type": {
+                            "freightShip:Code": "DSCNT",
+                            "freightShip:Description": "DSCNT"
+                        },
+                        "freightShip:Factor": {
+                            "freightShip:Value": 1229.29,
+                            "freightShip:UnitOfMeasurement": {
+                                "freightShip:Code": "USD"
+                            }
+                        }
+                    }, {
+                        "freightShip:Type": {
+                            "freightShip:Code": "DSCNT_RATE",
+                            "freightShip:Description": "DSCNT_RATE"
+                        },
+                        "freightShip:Factor": {
+                            "freightShip:Value": 75,
+                            "freightShip:UnitOfMeasurement": {
+                                "freightShip:Code": "%"
+                            }
+                        }
+                    }, {
+                        "freightShip:Type": {
+                            "freightShip:Code": 2,
+                            "freightShip:Description": 2
+                        },
+                        "freightShip:Factor": {
+                            "freightShip:Value": 40.98,
+                            "freightShip:UnitOfMeasurement": {
+                                "freightShip:Code": "USD"
+                            }
+                        }
+                    }, {
+                        "freightShip:Type": {
+                            "freightShip:Code": "LND_GROSS",
+                            "freightShip:Description": "LND_GROSS"
+                        },
+                        "freightShip:Factor": {
+                            "freightShip:Value": 1639.05,
+                            "freightShip:UnitOfMeasurement": {
+                                "freightShip:Code": "USD"
+                            }
+                        }
+                    }, {
+                        "freightShip:Type": {
+                            "freightShip:Code": "AFTR_DSCNT",
+                            "freightShip:Description": "AFTR_DSCNT"
+                        },
+                        "freightShip:Factor": {
+                            "freightShip:Value": 409.76,
+                            "freightShip:UnitOfMeasurement": {
+                                "freightShip:Code": "USD"
+                            }
+                        }
+                    }],
+                    "freightShip:TotalShipmentCharge": {
+                        "freightShip:CurrencyCode": "USD",
+                        "freightShip:MonetaryValue": 450.74
+                    },
+                    "freightShip:BillableShipmentWeight": {
+                        "freightShip:UnitOfMeasurement": {
+                            "freightShip:Code": "LBS"
+                        },
+                        "freightShip:Value": 1500
+                    },
+                    "freightShip:Service": {
+                        "freightShip:Code": 308
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+< soapenv: Envelope xmlns: soapenv = \"http://schemas.xmlsoap.org/soap/envelope/\">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <freightShip:FreightShipResponse xmlns:freightShip=\ "
+http: //www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0\">
+< common: Response xmlns: common = \"http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0\">
+                <common:ResponseStatus>
+                    <common:Code>1</common:Code>
+                    <common:Description>Success</common:Description>
+                </common:ResponseStatus>
+            </common:Response>
+            <freightShip:ShipmentResults>
+                <freightShip:OriginServiceCenterCode>RIC</freightShip:OriginServiceCenterCode>
+                <freightShip:ShipmentNumber>059113084</freightShip:ShipmentNumber>
+                <freightShip:BOLID>8810425</freightShip:BOLID>
+                <freightShip:Rate>
+                    <freightShip:Type>
+                        <freightShip:Code>DSCNT</freightShip:Code>
+                        <freightShip:Description>DSCNT</freightShip:Description>
+                    </freightShip:Type>
+                    <freightShip:Factor>
+                        <freightShip:Value>1229.29</freightShip:Value>
+                        <freightShip:UnitOfMeasurement>
+                            <freightShip:Code>USD</freightShip:Code>
+                        </freightShip:UnitOfMeasurement>
+                    </freightShip:Factor>
+                </freightShip:Rate>
+                <freightShip:Rate>
+                    <freightShip:Type>
+                        <freightShip:Code>DSCNT_RATE</freightShip:Code>
+                        <freightShip:Description>DSCNT_RATE</freightShip:Description>
+                    </freightShip:Type>
+                    <freightShip:Factor>
+                        <freightShip:Value>75.00</freightShip:Value>
+                        <freightShip:UnitOfMeasurement>
+                            <freightShip:Code>%</freightShip:Code>
+                        </freightShip:UnitOfMeasurement>
+                    </freightShip:Factor>
+                </freightShip:Rate>
+                <freightShip:Rate>
+                    <freightShip:Type>
+                        <freightShip:Code>2</freightShip:Code>
+                        <freightShip:Description>2</freightShip:Description>
+                    </freightShip:Type>
+                    <freightShip:Factor>
+                        <freightShip:Value>40.98</freightShip:Value>
+                        <freightShip:UnitOfMeasurement>
+                            <freightShip:Code>USD</freightShip:Code>
+                        </freightShip:UnitOfMeasurement>
+                    </freightShip:Factor>
+                </freightShip:Rate>
+                <freightShip:Rate>
+                    <freightShip:Type>
+                        <freightShip:Code>LND_GROSS</freightShip:Code>
+                        <freightShip:Description>LND_GROSS</freightShip:Description>
+                    </freightShip:Type>
+                    <freightShip:Factor>
+                        <freightShip:Value>1639.05</freightShip:Value>
+                        <freightShip:UnitOfMeasurement>
+                            <freightShip:Code>USD</freightShip:Code>
+                        </freightShip:UnitOfMeasurement>
+                    </freightShip:Factor>
+                </freightShip:Rate>
+                <freightShip:Rate>
+                    <freightShip:Type>
+                        <freightShip:Code>AFTR_DSCNT</freightShip:Code>
+                        <freightShip:Description>AFTR_DSCNT</freightShip:Description>
+                    </freightShip:Type>
+                    <freightShip:Factor>
+                        <freightShip:Value>409.76</freightShip:Value>
+                        <freightShip:UnitOfMeasurement>
+                            <freightShip:Code>USD</freightShip:Code>
+                        </freightShip:UnitOfMeasurement>
+                    </freightShip:Factor>
+                </freightShip:Rate>
+                <freightShip:TotalShipmentCharge>
+                    <freightShip:CurrencyCode>USD</freightShip:CurrencyCode>
+                    <freightShip:MonetaryValue>450.74</freightShip:MonetaryValue>
+                </freightShip:TotalShipmentCharge>
+                <freightShip:BillableShipmentWeight>
+                    <freightShip:UnitOfMeasurement>
+                        <freightShip:Code>LBS</freightShip:Code>
+                    </freightShip:UnitOfMeasurement>
+                    <freightShip:Value>1500</freightShip:Value>
+                </freightShip:BillableShipmentWeight>
+                <freightShip:Service>
+                    <freightShip:Code>308</freightShip:Code>
+                </freightShip:Service>
+            </freightShip:ShipmentResults>
+        </freightShip:FreightShipResponse>
+    </soapenv:Body>
+</soapenv:Envelope>
