@@ -4,6 +4,7 @@ var upsAPI = require('shipping-ups');
 var util = require('util');
 var fs = require('fs');
 var https = require('https');
+var http = require('http');
 var parser = require('xml2json');
 
 var options = {
@@ -457,161 +458,35 @@ function freightshipdescribe(response,request) {
 
 function freightship(response,request) {
    
-   /* var json;
-    var soap = require('soap');
-  var url = 'http://www.doubletaketech.net/ups/wsdl/FreightShip.wsdl';
-  var postData= '';
+    var postData= '';
     request.addListener("data", function(postDataChunk) {
             postData += postDataChunk;
     });
      
     
     request.addListener("end", function() {
-       var jsonData = JSON.parse(postData);
-         var args = {common : {Request: '', RequestOption : '1'}};
-        soap.createClient(url, args,function(err, client) {
-
-               client.addSoapHeader({
-                  "upss:UPSSecurity": {
-                    "upss:UsernameToken": {
-                      "upss:Username": options.username,
-                      "upss:Password": options.password
-                    },
-                    "upss:ServiceAccessToken": {
-                      "upss:AccessLicenseNumber": options.access_key
-                    }
-                  }
-              });
-           
-              
-             client.FreightShipService.FreightShipPort.ProcessShipment(jsonData,function(err, result) {
-                
-                 
-                 
-                  if(err){
-                  json = err;
-                  }
-                  else {
-                      json = JSON.stringify(result);
-                  }
-                   console.log(json);
-                 json = JSON.stringify(client.lastRequest);
-                 response.writeHead(200, { 
-                                    'Content-Type': 'application/json',
-                                    'Access-Control-Allow-Origin': '*'
-                                });
-                 response.end(json);
-
-               
-              });
-
-              
-            
-            
-            });
+       //var jsonData = JSON.parse(postData);
         
-         
-    });  */
-   
-        var body = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:error="http://www.ups.com/XMLSchema/XOLTWS/Error/v1.1" xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0" xmlns:upss="http://www.ups.com/XMLSchema/XOLTWS/UPSS/v1.0" xmlns:fsp="http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0" xmlns:tns="http://www.ups.com/WSDL/XOLTWS/FreightShip/v1.0">'+
-        '<soap:Header><upss:UPSSecurity>'+
-            '<upss:UsernameToken>'+
-            '<upss:Username>eventrio</upss:Username>'+
-            '<upss:Password>Kenziemac1!</upss:Password>'+
-            '</upss:UsernameToken>'+
-            '<upss:ServiceAccessToken>'+
-            '<upss:AccessLicenseNumber>ECD9453AD9018E66</upss:AccessLicenseNumber>'+
-            '</upss:ServiceAccessToken>'+
-            '</upss:UPSSecurity>'+
-            '</soap:Header>'+
-    '<soap:Body><fsp:FreightShipRequest xmlns:fsp="http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0" xmlns="http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0">'+
-            '<common:Request>'+
-                '<common:RequestOption>1</common:RequestOption>'+
-            '</common:Request>'+
-            '<fsp:Shipment>'+
-                '<fsp:ShipFrom>'+
-                    '<fsp:Name>Developer Test 1</fsp:Name>'+
-                    '<fsp:Address>'+
-                        '<fsp:AddressLine>101 Developer Way</fsp:AddressLine>'+
-                        '<fsp:City>Richmond</fsp:City>'+
-                        '<fsp:StateProvinceCode>VA</fsp:StateProvinceCode>'+
-                        '<fsp:Town></fsp:Town>'+
-                        '<fsp:PostalCode>23224</fsp:PostalCode>'+
-                        '<fsp:CountryCode>US</fsp:CountryCode>'+
-                    '</fsp:Address>'+
-                    '<fsp:Phone>'+
-                        '<fsp:Number>8326891199</fsp:Number>'+
-                    '</fsp:Phone>'+
-                '</fsp:ShipFrom>'+
-                '<fsp:ShipperNumber>E06F44</fsp:ShipperNumber>'+
-                '<fsp:ShipTo>'+
-                    '<fsp:Name>Consignee Test 1</fsp:Name>'+
-                    '<fsp:Address>'+
-                        '<fsp:AddressLine>1000 Consignee Street</fsp:AddressLine>'+
-                        '<fsp:City>Allanton</fsp:City>'+
-                        '<fsp:StateProvinceCode>MO</fsp:StateProvinceCode>'+
-                        '<fsp:Town></fsp:Town>'+
-                        '<fsp:PostalCode>63025</fsp:PostalCode>'+
-                        '<fsp:CountryCode>US</fsp:CountryCode>'+
-                    '</fsp:Address>'+
-                    '<fsp:AttentionName></fsp:AttentionName>'+
-                    '<fsp:TariffPoint></fsp:TariffPoint>'+
-                '</fsp:ShipTo>'+
-                '<fsp:PaymentInformation>'+
-                    '<fsp:Payer>'+
-                        '<fsp:Name>Developer Test 1</fsp:Name>'+
-                        '<fsp:Address>'+
-                            '<fsp:AddressLine>101 Developer Way</fsp:AddressLine>'+
-                            '<fsp:City>Richmond</fsp:City>'+
-                            '<fsp:StateProvinceCode>VA</fsp:StateProvinceCode>'+
-                            '<fsp:Town></fsp:Town>'+
-                            '<fsp:PostalCode>23224</fsp:PostalCode>'+
-                            '<fsp:CountryCode>US</fsp:CountryCode>'+
-                        '</fsp:Address>'+
-                        '<fsp:ShipperNumber>E06F44</fsp:ShipperNumber>'+
-                        '<fsp:AttentionName></fsp:AttentionName>'+
-                    '</fsp:Payer>'+
-                    '<fsp:ShipmentBillingOption>'+
-                        '<fsp:Code>10</fsp:Code>'+
-                        '<fsp:Description>Pre-Paid</fsp:Description>'+
-                    '</fsp:ShipmentBillingOption>'+
-                '</fsp:PaymentInformation>'+
-                '<fsp:Service>'+
-                    '<fsp:Code>308</fsp:Code>'+
-                    '<fsp:Description>UPS Freight LTL</fsp:Description>'+
-                '</fsp:Service>'+
-                '<fsp:HandlingUnitOne>'+
-                    '<fsp:Quantity>1</fsp:Quantity>'+
-                    '<fsp:Type>'+
-                        '<fsp:Code>PLT</fsp:Code>'+
-                        '<fsp:Description>Pallet</fsp:Description>'+
-                    '</fsp:Type>'+
-                '</fsp:HandlingUnitOne>'+
-                '<fsp:Commodity>'+
-                    '<fsp:CommodityID></fsp:CommodityID>'+
-                    '<fsp:Description>Samples</fsp:Description>'+
-                    '<fsp:Weight>'+
-                        '<fsp:UnitOfMeasurement>'+
-                            '<fsp:Code>LBS</fsp:Code>'+
-                            '<fsp:Description>Pounds</fsp:Description>'+
-                        '</fsp:UnitOfMeasurement>'+
-                        '<fsp:Value>1500</fsp:Value>'+
-                    '</fsp:Weight>'+
-                    '<fsp:NumberOfPieces>1</fsp:NumberOfPieces>'+
-                    '<fsp:PackagingType>'+
-                        '<fsp:Code>PLT</fsp:Code>'+
-                        '<fsp:Description>Pallet</fsp:Description>'+
-                    '</fsp:PackagingType>'+
-                    '<fsp:FreightClass>92.5</fsp:FreightClass>'+
-                    '<fsp:NMFCCommodityCode>1160301</fsp:NMFCCommodityCode>'+
-                '</fsp:Commodity>'+
-            '</fsp:Shipment>'+
-        '</fsp:FreightShipRequest>'+
-    '</soap:Body>'+
-'</soap:Envelope>';
-console.log(body);
-    
-
+      var soapStart = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:error="http://www.ups.com/XMLSchema/XOLTWS/Error/v1.1" xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0" xmlns:upss="http://www.ups.com/XMLSchema/XOLTWS/UPSS/v1.0" xmlns:fsp="http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0" xmlns:tns="http://www.ups.com/WSDL/XOLTWS/FreightShip/v1.0">'+
+            '<soap:Header><upss:UPSSecurity>'+
+                '<upss:UsernameToken>'+
+                '<upss:Username>eventrio</upss:Username>'+
+                '<upss:Password>Kenziemac1!</upss:Password>'+
+                '</upss:UsernameToken>'+
+                '<upss:ServiceAccessToken>'+
+                '<upss:AccessLicenseNumber>ECD9453AD9018E66</upss:AccessLicenseNumber>'+
+                '</upss:ServiceAccessToken>'+
+                '</upss:UPSSecurity>'+
+                '</soap:Header>';
+        
+        
+        var soapbody = postData.substring(1, postData.length-1);
+        soapbody = soapbody.replace(/\\/g, '');
+                                    
+      var soapEnd = '</soap:Envelope>';
+        
+      var body = soapStart.concat(soapbody,soapEnd);
+        console.log(body);
         var postRequest = {
             host: "wwwcie.ups.com",
             path: "/webservices/FreightShip",
@@ -626,16 +501,22 @@ console.log(body);
         var buffer = "";
 
         var req = https.request( postRequest, function( res )    {
-            
-           //console.log( res.statusCode );
+           
            var buffer = "";
            res.on( "data", function( data ) { buffer = buffer + data; } );
            res.on( "end", function( data ) { 
-               //console.log( buffer ); 
+               console.log( buffer ); 
                // var json = JSON.stringify(buffer);
-               
+              
 
                 var xml = buffer;
+               //strip out namespace prefixes
+                xml = xml.replace(/soapenv:/g, '');
+                xml = xml.replace(/freightShip:/g, '');
+                xml = xml.replace(/common:/g, '');
+                //strip out namespace prefixes for errors
+                xml = xml.replace(/err:/g, '');
+   
                 var json = parser.toJson(xml);
                 //console.log(json);
                
@@ -650,7 +531,7 @@ console.log(body);
     
         req.on('error', function(e) {
               console.log('problem with request: ' + e.message);
-            var json = JSON.stringify(e);
+            var json = JSON.stringify(e.message);
                  response.writeHead(200, { 
                                     'Content-Type': 'application/json',
                                     'Access-Control-Allow-Origin': '*'
@@ -660,8 +541,9 @@ console.log(body);
 
         req.write( body );
         req.end();
-    
+    });
    /* RESPONSE SAMPLE JSON
+   
    
    {
     "soapenv:Envelope": {

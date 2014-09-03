@@ -1,4 +1,5 @@
-var server = 'http://dkerr-ups.nodejitsu.com';
+//var server = 'http://dkerr-ups.nodejitsu.com';
+var server = 'http://eva-21647.onmodulus.net';
 $(document).ready(function(){
 
     $('#addressBTN').on('click',function(){
@@ -650,8 +651,8 @@ function freightship(){
         consigneeCity:'Allanton',
         consigneeState:'MO',
         consigneeZip:'63025',
-        shippingBillingOptionCode:'10',
-        shippingBillingOptionCodeDescription:'Pre-Paid',
+        shipmentBillingOptionCode:'10',
+        shipmentBillingOptionCodeDescription:'Pre-Paid',
         serviceCode:'308',
         serviceCodeDescription:'UPS Freight LTL',
         handlingUnitOneQuantity:'1',
@@ -672,11 +673,113 @@ function freightship(){
        
     }
    
-//freightClasses = [50,55,60,65,70,77.5,85,92.5,100,110,125,150,175,200,250,300,400,500];
-//handlingUnits = [PLT,CBY,SKD,TOT];
-//packagingTypes = [BAG,BAR,BDL,BIN,BOX,BSK,BUN,CAB,CAN,CAR,CAS,CBY,CON,CRT,CSK,CTN,CYL,DRM,LOO,OTH,PAL,PCS,PKG,PLN,PLT,RCK,REL,ROL,SKD,SPL,TBE,TNK,UNT,VPK,WRP];
-
-    postData = {
+ var postData = 
+    '<soap:Body><fsp:FreightShipRequest xmlns:fsp="http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0" xmlns="http://www.ups.com/XMLSchema/XOLTWS/FreightShip/v1.0">'+
+            '<common:Request>'+
+                '<common:RequestOption>1</common:RequestOption>'+
+            '</common:Request>'+
+            '<fsp:Shipment>'+
+                '<fsp:ShipFrom>'+
+                    '<fsp:Name>'+input.shipperName+'</fsp:Name>'+
+                    '<fsp:Address>'+
+                        '<fsp:AddressLine>'+input.shipperAddress+'</fsp:AddressLine>'+
+                        '<fsp:City>'+input.shipperCity+'</fsp:City>'+
+                        '<fsp:StateProvinceCode>'+input.shipperState+'</fsp:StateProvinceCode>'+
+                        '<fsp:Town></fsp:Town>'+
+                        '<fsp:PostalCode>'+input.shipperZip+'</fsp:PostalCode>'+
+                        '<fsp:CountryCode>US</fsp:CountryCode>'+
+                    '</fsp:Address>'+
+                    '<fsp:Phone>'+
+                        '<fsp:Number>'+input.shipperPhone+'</fsp:Number>'+
+                    '</fsp:Phone>'+
+                '</fsp:ShipFrom>'+
+                '<fsp:ShipperNumber>'+input.shipperNumber+'</fsp:ShipperNumber>'+
+                '<fsp:ShipTo>'+
+                    '<fsp:Name>'+input.shipperName+'</fsp:Name>'+
+                    '<fsp:Address>'+
+                        '<fsp:AddressLine>'+input.consigneeName+'</fsp:AddressLine>'+
+                        '<fsp:City>'+input.consigneeCity+'</fsp:City>'+
+                        '<fsp:StateProvinceCode>'+input.consigneeState+'</fsp:StateProvinceCode>'+
+                        '<fsp:Town></fsp:Town>'+
+                        '<fsp:PostalCode>'+input.consigneeZip+'</fsp:PostalCode>'+
+                        '<fsp:CountryCode>US</fsp:CountryCode>'+
+                    '</fsp:Address>'+
+                    '<fsp:AttentionName></fsp:AttentionName>'+
+                    '<fsp:TariffPoint></fsp:TariffPoint>'+
+                '</fsp:ShipTo>'+
+                '<fsp:PaymentInformation>'+
+                    '<fsp:Payer>'+
+                        '<fsp:Name>'+input.shipperName+'</fsp:Name>'+
+                        '<fsp:Address>'+
+                            '<fsp:AddressLine>'+input.shipperAddress+'</fsp:AddressLine>'+
+                            '<fsp:City>'+input.shipperCity+'</fsp:City>'+
+                            '<fsp:StateProvinceCode>'+input.shipperState+'</fsp:StateProvinceCode>'+
+                            '<fsp:Town></fsp:Town>'+
+                            '<fsp:PostalCode>'+input.shipperZip+'</fsp:PostalCode>'+
+                            '<fsp:CountryCode>US</fsp:CountryCode>'+
+                        '</fsp:Address>'+
+                        '<fsp:ShipperNumber>'+input.shipperNumber+'</fsp:ShipperNumber>'+
+                        '<fsp:AttentionName></fsp:AttentionName>'+
+                    '</fsp:Payer>'+
+                    '<fsp:ShipmentBillingOption>'+
+                        '<fsp:Code>'+input.shipmentBillingOptionCode+'</fsp:Code>'+
+                        '<fsp:Description>'+input.shipmentBillingOptionCodeDescription+'</fsp:Description>'+
+                    '</fsp:ShipmentBillingOption>'+
+                '</fsp:PaymentInformation>'+
+                '<fsp:Service>'+
+                    '<fsp:Code>'+input.serviceCode+'</fsp:Code>'+
+                    '<fsp:Description>'+input.serviceCodeDescription+'</fsp:Description>'+
+                '</fsp:Service>'+
+                '<fsp:HandlingUnitOne>'+
+                    '<fsp:Quantity>'+input.handlingUnitOneQuantity+'</fsp:Quantity>'+
+                    '<fsp:Type>'+
+                        '<fsp:Code>'+input.handlingUnitOneCode+'</fsp:Code>'+
+                        '<fsp:Description>'+input.handlingUnitOneCode+'</fsp:Description>'+
+                    '</fsp:Type>'+
+                '</fsp:HandlingUnitOne>'+
+                '<fsp:Commodity>'+
+                    '<fsp:CommodityID>'+input.commodityID+'</fsp:CommodityID>'+
+                    '<fsp:Description>'+input.commodityDescription+'</fsp:Description>'+
+                    '<fsp:Weight>'+
+                        '<fsp:UnitOfMeasurement>'+
+                            '<fsp:Code>'+input.commodityWeightUnitOfMeasurementCode+'</fsp:Code>'+
+                            '<fsp:Description>'+input.commodityWeightUnitOfMeasurementCode+'</fsp:Description>'+
+                        '</fsp:UnitOfMeasurement>'+
+                        '<fsp:Value>'+input.commodityWeightValue+'</fsp:Value>'+
+                    '</fsp:Weight>'+
+                    '<fsp:NumberOfPieces>'+input.commodityNumberOfPieces+'</fsp:NumberOfPieces>'+
+                    '<fsp:PackagingType>'+
+                        '<fsp:Code>'+input.commodityPackagingTypeCode+'</fsp:Code>'+
+                        '<fsp:Description>'+input.commodityPackagingTypeCode+'</fsp:Description>'+
+                    '</fsp:PackagingType>'+
+                    '<fsp:FreightClass>'+input.commodityFreightClass+'</fsp:FreightClass>'+
+                '</fsp:Commodity>'+
+                '<fsp:Documents>'+
+                '<fsp:Image>'+
+                    '<Type>'+
+                    '<Code>30</Code>'+
+                    '<Description>Label</Description>'+
+                  '</Type>'+
+                  '<LabelsPerPage>1</LabelsPerPage>'+
+                  '<Format>'+
+                    '<Code>01</Code>'+
+                    '<Description>PDF</Description>'+
+                  '</Format>'+
+                  '<PrintFormat>'+
+                    '<Code>02</Code>'+
+                  '</PrintFormat>'+
+                  '<PrintSize>'+
+                    '<Length>4</Length>'+
+                    '<Width>6</Width>'+
+                  '</PrintSize>'+
+                '</fsp:Image>'+
+                '</fsp:Documents>'+
+            '</fsp:Shipment>'+
+        '</fsp:FreightShipRequest>'+
+    '</soap:Body>';
+    
+   
+   /* postData = {
             
                     "Request":{
                         "RequestOption": input.requestOption
@@ -772,7 +875,7 @@ function freightship(){
          
                 }
                 
-        }
+        }*/
     
    
     var json = JSON.stringify(postData);
